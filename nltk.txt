@@ -1,1 +1,4 @@
-corpus
+wordnet
+stopwords
+vader_lexicon
+floresta

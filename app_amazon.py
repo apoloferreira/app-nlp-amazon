@@ -18,6 +18,9 @@ from wordcloud import WordCloud
 from nltk.corpus import stopwords
 import nlp
 
+# Stopwords
+stop_words_pt = set(stopwords.words('portuguese'))
+
 
 #### Configurações do Layout ####
 
@@ -43,9 +46,6 @@ html_banner = """
 # Imagem
 amazon_logo = Image.open('images/amazon_logo.png')
 st.image(amazon_logo, caption=None, width=None)
-
-# Stopwords
-stop_words_pt = set(stopwords.words('portuguese'))
 
 st.title("**Análise de Comentários de Produtos na Amazon**")
 st.markdown('-----')
