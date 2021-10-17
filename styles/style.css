@@ -1,0 +1,21 @@
+body {
+    color: rgb(216, 33, 33);    
+    background-color: rgb(34, 33, 33);
+}
+
+.fullScreenFrame > div {
+    display: flex;
+    justify-content: center;
+}
+
+.mario{
+    color: #e20b0b;
+    color: #4f9bce;
+    color: #ec720e;
+}
+/*
+div.stButton > button:first-child {
+    background-color: rgb(255, 153, 0);
+    border-color: rgb(56, 56, 56);
+}
+*/
