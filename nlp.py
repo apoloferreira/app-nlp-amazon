@@ -9,9 +9,10 @@ from textblob import TextBlob
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from nltk import word_tokenize
+import pt_core_news_sm
 
-nlp_ = spacy.load('pt_core_news_sm')
-
+#nlp = spacy.load('pt_core_news_sm')
+nlp = pt_core_news_sm.load()
 
 # Função para obter subjetividade
 def getSubjectivity(text):
@@ -51,7 +52,7 @@ def limpa_comentarios(text):
     regex = re.compile('[' + re.escape(string.punctuation) + '\\r\\t\\n]')
     nopunct = regex.sub(" ", str(text))    
     # Usa o SpaCy para lematização
-    doc = nlp_(nopunct, disable = ['parser', 'ner'])
+    doc = nlp(nopunct, disable = ['parser', 'ner'])
     lemma = [token.lemma_ for token in doc]
     return lemma
 
