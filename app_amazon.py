@@ -111,7 +111,7 @@ def estratificar_link(url):
 
 # Obtendo comentários do produto
 def obter_comentarios(resultado):
-    soup = BeautifulSoup(resultado, 'lxml')
+    soup = BeautifulSoup(resultado, 'html.parser')
     comentarios_web = soup.find_all("a", class_="a-size-base a-link-normal review-title a-color-base review-title-content a-text-bold")    
     return comentarios_web
 
