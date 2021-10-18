@@ -9,10 +9,9 @@ from textblob import TextBlob
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from nltk import word_tokenize
-import pt_core_news_sm
 
-#nlp = spacy.load('pt_core_news_sm')
-nlp = pt_core_news_sm.load()
+nlp = spacy.load('./models/pt_core_news_sm-3.1.0/')
+#nlp = pt_core_news_sm.load()
 
 # Função para obter subjetividade
 def getSubjectivity(text):
